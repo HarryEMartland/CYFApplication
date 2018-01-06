@@ -1,0 +1,27 @@
+{
+  "name": "cyfapplicationform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mockito",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "react-scripts": "^1.0.17"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.177.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
+    "react-dom": "^16.2.0",
+    "react-google-signin": "^1.0.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.2.0"
+  }
+}
