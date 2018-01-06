@@ -32,6 +32,7 @@ export default (state, action) => {
         case EventTypes.APPLICATION.WHAT_DO_WITH_SKILLS.UPDATE:
         case EventTypes.APPLICATION.WHY_BECOME_PROGRAMMER.UPDATE:
         case EventTypes.APPLICATION.CODE_ACADEMY_ID.UPDATE:
+            return {...state, application:applicationReducer(state.application, action)};
         case EventTypes.APPLICATION.SAVE.START:
             return {...state, applicationSaving:true};
         case EventTypes.APPLICATION.SAVE.COMPLETE:
