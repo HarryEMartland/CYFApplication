@@ -4,6 +4,8 @@ import EventTypes from './EventTypes'
 function applicationReducer(state, action) {
 
     switch (action.type) {
+        case EventTypes.APPLICATION.LOCATION.UPDATE:
+            return {...state, location: action.value};
         case EventTypes.APPLICATION.CODE_ACADEMY_ID.UPDATE:
             return {...state, codeAcademyId: action.value};
         case EventTypes.APPLICATION.WHY_BECOME_PROGRAMMER.UPDATE:
@@ -28,6 +30,7 @@ export default (state, action) => {
                 loggedIn: true,
                 application: {...action.application, name: loginData.name, email:loginData.email, id:loginData._identityId}
             };
+        case EventTypes.APPLICATION.LOCATION.UPDATE:
         case EventTypes.APPLICATION.WHAT_DO_5_YEARS.UPDATE:
         case EventTypes.APPLICATION.WHAT_DO_WITH_SKILLS.UPDATE:
         case EventTypes.APPLICATION.WHY_BECOME_PROGRAMMER.UPDATE:

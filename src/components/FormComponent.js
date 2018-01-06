@@ -8,6 +8,16 @@ export default props => (
         <Form>
 
             <FormGroup>
+                <ControlLabel>Nearest CYF Location</ControlLabel>
+                <select value={props.location} onChange={props.updateLocation} className="form-control">
+                    <option disabled selected value>Select a location</option>
+                    <option value="GLASGOW">Glasgow</option>
+                    <option value="LONDON">London</option>
+                    <option value="MANCHESTER">Manchester</option>
+                </select>
+            </FormGroup>
+
+            <FormGroup>
                 <ControlLabel>Why do you want to become a programmer? (100 words)</ControlLabel>
                 <textarea onChange={props.updateWhyBecomeProgrammer}
                           className="form-control"

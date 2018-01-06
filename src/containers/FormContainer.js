@@ -7,6 +7,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+    updateLocation: (event) => {
+        dispatch({type: EventTypes.APPLICATION.LOCATION.UPDATE, value: event.target.value})
+    },
     updateCodeAcademyId: (event) => {
         dispatch({type: EventTypes.APPLICATION.CODE_ACADEMY_ID.UPDATE, value: event.target.value})
     },

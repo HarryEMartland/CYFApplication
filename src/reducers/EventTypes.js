@@ -2,6 +2,9 @@ export default {
     LOGIN:"LOGIN",
     APPLICATION: {
         _:"APPLICATION",
+        LOCATION: {
+            UPDATE: "APPLICATION.LOCATION.UPDATE"
+        },
         CODE_ACADEMY_ID: {
             UPDATE: "APPLICATION.CODE_ACADEMY_ID.UPDATE"
         },
@@ -12,7 +15,6 @@ export default {
         WHAT_DO_WITH_SKILLS: {
             UPDATE: "APPLICATION.WHAT_DO_WITH_SKILLS.UPDATE"
         },
-
         WHAT_DO_5_YEARS: {
             UPDATE: "APPLICATION.WHAT_DO_5_YEARS.UPDATE"
         },
