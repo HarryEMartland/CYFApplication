@@ -40,6 +40,14 @@ export function login(googleData, token) {
     }
 }
 
+export function updateApplicationField(field, value) {
+    return {
+        type: EventTypes.APPLICATION.FIELD.UPDATE,
+        field,
+        value
+    };
+}
+
 export function save() {
     return function (dispatch, getState) {
         dispatch({type: EventTypes.APPLICATION.SAVE.START});

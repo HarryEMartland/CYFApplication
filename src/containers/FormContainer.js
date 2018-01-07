@@ -1,26 +1,16 @@
 import {connect} from 'react-redux'
 import FormComponent from "../components/FormComponent";
-import EventTypes from "../reducers/EventTypes";
+import {updateApplicationField} from "../actions/index"
 
 const mapStateToProps = (state) => ({
     ...state.application
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    updateLocation: (event) => {
-        dispatch({type: EventTypes.APPLICATION.LOCATION.UPDATE, value: event.target.value})
-    },
-    updateCodeAcademyId: (event) => {
-        dispatch({type: EventTypes.APPLICATION.CODE_ACADEMY_ID.UPDATE, value: event.target.value})
-    },
-    updateWhyBecomeProgrammer: (event) => {
-        dispatch({type: EventTypes.APPLICATION.WHY_BECOME_PROGRAMMER.UPDATE, value: event.target.value})
-    },
-    updateWhatDoWithSkills: (event) => {
-        dispatch({type: EventTypes.APPLICATION.WHAT_DO_WITH_SKILLS.UPDATE, value: event.target.value})
-    },
-    updateWhatDo5Years: (event) => {
-        dispatch({type: EventTypes.APPLICATION.WHAT_DO_5_YEARS.UPDATE, value: event.target.value})
+    updateField: (field) => {
+        return function (event) {
+            dispatch(updateApplicationField(field, event.target.value))
+        }
     }
 });
 
