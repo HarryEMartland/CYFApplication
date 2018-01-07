@@ -1,10 +1,13 @@
 import React from 'react';
 import {ControlLabel, Form, FormControl, FormGroup, InputGroup} from "react-bootstrap";
 import {LOCATION, WHY_BECOME_PROGRAMMER, WHAT_DO_WITH_SKILLS,WHAT_DO_5_YEARS, CODE_ACADEMY_ID} from "../Application"
+import ProgressContainer from "../containers/ProgressContainer";
 
 export default props => (
     <div>
         <h1>Hi, {props.name}</h1>
+
+        <ProgressContainer/>
 
         <Form>
 
